@@ -111,21 +111,21 @@ def mergeTwoLists(self, l1, l2):
         
         while True:
             if not l1:
-                tail.next = l2
+                tail.next_node = l2
                 break
             elif not l2:
-                tail.next = l1
+                tail.next_node = l1
                 break            
-            if l1.val <= l2.val:
-                tail.next = l1
-                l1 = l1.next
+            if l1.data <= l2.data:
+                tail.next_node = l1
+                l1 = l1.next_node
             else:
-                tail.next = l2
-                l2 = l2.next
-            tail = tail.next
+                tail.next_node = l2
+                l2 = l2.next_node
+            tail = tail.next_node
             
-        return dummy.next
-        
+        return dummy.next_node
+
 
 def main():
     """main function - all testing moved to linked_list_test.py, run that file for the tests"""
