@@ -99,6 +99,33 @@ class LL():
             raise ValueError("Data not in list")
 
 
+def mergeTwoLists(self, l1, l2):
+        """
+        :type l1: ListNode
+        :type l2: ListNode
+        :rtype: ListNode
+        """
+        
+        dummy = ListNode(999)
+        tail = dummy
+        
+        while True:
+            if not l1:
+                tail.next = l2
+                break
+            elif not l2:
+                tail.next = l1
+                break            
+            if l1.val <= l2.val:
+                tail.next = l1
+                l1 = l1.next
+            else:
+                tail.next = l2
+                l2 = l2.next
+            tail = tail.next
+            
+        return dummy.next
+        
 
 def main():
     """main function - all testing moved to linked_list_test.py, run that file for the tests"""
