@@ -99,7 +99,7 @@ class LL():
             raise ValueError("Data not in list")
 
 
-def mergeTwoLists(self, l1, l2):
+def mergeTwoLists(l1, l2):
         """
         :type l1: ListNode
         :type l2: ListNode
